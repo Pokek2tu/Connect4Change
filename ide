@@ -1,0 +1,41 @@
+def ask_question(question, answer):
+    user_answer = input(question + " ")
+    
+    if user_answer.lower() == answer.lower():
+        print("✅ Correct!")
+        return 1
+    else:
+        print("❌ Incorrect!")
+        return 0
+
+def main():
+    print("🌍 Connect4Change")
+    print("Learn how to make a positive impact!\n")
+
+    points = 0
+
+    points += ask_question(
+        "What can you do to help the environment? (recycle)",
+        "recycle"
+    )
+
+    points += ask_question(
+        "What helps a community grow? (volunteer)",
+        "volunteer"
+    )
+
+    points += ask_question(
+        "What is important for every child? (education)",
+        "education"
+    )
+
+    print("\n🏆 Your Score:", points, "/ 3")
+
+    if points == 3:
+        print("🌟 Social Impact Champion!")
+    elif points >= 2:
+        print("👏 Great Job!")
+    else:
+        print("💡 Keep Learning!")
+
+main()
